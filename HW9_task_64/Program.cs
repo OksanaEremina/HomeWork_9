@@ -5,3 +5,16 @@
 
 // M = 4; N = 8. -> ""4, 6, 7, 8""
 
+    Console.WriteLine("Enter M:");
+    int M = int.Parse(Console.ReadLine());
+    Console.WriteLine("Enter N:");
+    int N = int.Parse(Console.ReadLine());
+    if (M <= N) 
+    {
+    int[] numbers = new int[N-M+1];
+    for (int i = M; i <= N; ++i) 
+    {
+        numbers[i-M] = i;
+    }
+    Console.WriteLine(string.Join(",", numbers));
+    }
